@@ -1,0 +1,35 @@
+.steps{
+    overflow: hidden;
+    margin: 0 -5rem;
+    background-color: var(--color-primary);
+    ul{
+        gap:5rem;
+    }
+    li{
+        max-height: 13rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: var(--background-color);
+    }
+}
+
+@media (max-width: 768px) {
+    .steps{
+        flex-direction: column;
+        margin: 0;
+        ul{
+            display: flex;
+            justify-content: center;
+            gap: 0.3rem;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-left: -1.9rem;
+            li{
+                min-width: 6.4rem;
+                img{
+                    width: 3rem;
+                }
+            }
+        }
+    }
+}

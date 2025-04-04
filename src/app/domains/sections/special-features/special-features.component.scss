@@ -1,0 +1,17 @@
+.special-features {
+    .card-content{
+        text-align: center;
+    }
+    img{
+        margin: 0 auto;
+        max-width: 8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .special-features{
+        .title-section{
+            flex-direction: column;
+        }
+    }
+}

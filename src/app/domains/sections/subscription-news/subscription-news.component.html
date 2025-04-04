@@ -1,0 +1,82 @@
+<section id="subscription-news" class="subscription-news padding-section mb-5">
+  <img src="assets/images/decoration-one.png" alt="Decoration" />
+  <div class="container">
+    <p class="title-section-text--secondary fw-bold">
+      Subscribe to our newsletter
+    </p>
+    <div>
+      <form
+        class="d-flex gap-3"
+        [formGroup]="subscriptionForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <div>
+          <input
+            class="form-control"
+            type="text"
+            formControlName="nombre"
+            placeholder="First Name"
+          />
+          <div
+            *ngIf="
+              subscriptionForm.get('nombre')?.invalid &&
+              subscriptionForm.get('nombre')?.touched
+            "
+          >
+            <small class="text-danger" *ngIf="subscriptionForm.get('nombre')?.errors?.['required']"
+              >First name is required.</small
+            >
+            <small class="text-danger" *ngIf="subscriptionForm.get('nombre')?.errors?.['minlength']"
+              >First name must be at least 3 characters long.</small
+            >
+          </div>
+        </div>
+        <div>
+          <input
+            class="form-control"
+            type="email"
+            formControlName="correo"
+            placeholder="Email Address"
+          />
+          <div
+            *ngIf="
+              subscriptionForm.get('correo')?.invalid &&
+              subscriptionForm.get('correo')?.touched
+            "
+          >
+            <small class="text-danger" *ngIf="subscriptionForm.get('correo')?.errors?.['required']"
+              >Email is required.</small
+            >
+            <small class="text-danger" *ngIf="subscriptionForm.get('correo')?.errors?.['pattern']"
+              >Invalid email format.</small
+            >
+          </div>
+        </div>
+
+        <button class="btn button-fourth" type="submit" >Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <img src="assets/images/decoration-two.png" alt="Decoration" />
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div #successToast class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          Supscription successful!
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div #alertToast class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          Error creating subscription.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+a{
+    text-decoration: none;
+}
+
+.white{
+    color: var(--background-color);
+}
+
+.hover--text{
+    color: var(--text-secondary);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        color: var(--color-primary);
+    }
+}
+nav{
+    background-color: var(--background-color);
+    align-items: center;
+    border-bottom: 0.001rem solid rgba(128, 128, 128, 0.491);
+    .navbar-nav{
+        gap: 1.2rem;
+        margin-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    img{
+        display: none;
+    }
+}
+

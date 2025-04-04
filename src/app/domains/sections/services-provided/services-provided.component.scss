@@ -1,0 +1,26 @@
+.services-provided{
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    li img{
+        max-width: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services-provided{
+        .title-section{
+            flex-direction: column;
+        }
+
+        .content-section{
+            flex-direction: column;
+            gap:2rem;
+        }
+    }
+    
+}

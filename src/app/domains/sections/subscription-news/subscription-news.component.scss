@@ -1,0 +1,47 @@
+.subscription-news{
+    display: flex;
+    border-radius: 2rem;
+    background-color: var(--color-tertiary);
+    .container{
+        display: flex;
+        padding: 5rem 0;
+        flex-direction: column;
+        align-items: center;
+        input{
+            height: 3rem;
+            color: var(--background-color);
+            background-color: rgba(255, 255, 255, 0.314);
+            border: none;
+            &::placeholder{
+                color: var(--background-color);
+            }
+            &:focus{
+                box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.832);
+            }
+        }
+        button{
+            height: 3rem;
+            width: 15rem;
+        }
+    }
+    img{
+        max-width: 7rem;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .subscription-news{
+        img{
+            display: none;
+        }
+        form{
+            flex-direction: column;
+        }
+        .title-section-text--secondary{
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.hero-section{
+    a{
+        text-decoration: none;
+    }
+    .button-secondary{
+        &:hover{
+            a{
+                color: var(--background-color);
+            }
+        }
+    }
+    .one{
+        color: var(--text-secondary);
+    }
+    .two{
+        color: var(--background-color);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section{
+        img{
+            display: none;
+        }
+    }
+}

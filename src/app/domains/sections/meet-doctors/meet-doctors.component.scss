@@ -1,0 +1,81 @@
+.meet-doctors {
+  img {
+      filter: grayscale(100%);
+  }
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out; 
+  will-change: transform; 
+  padding: 10px 0; 
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+  padding: 0 50px; 
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 18rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.carousel-control-prev {
+  left: 15px;
+}
+
+.carousel-control-next {
+  right: 15px;
+}
+
+  
+
+  @media screen and (max-width: 768px) {
+    .meet-doctors{
+      .title-section{
+          flex-direction: column;
+      }
+      .carousel-container{
+        overflow-x: scroll;
+      }
+      .carousel-item {
+        justify-content: center;
+      }
+    }
+    
+  }

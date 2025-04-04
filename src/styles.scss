@@ -1,1 +1,147 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+:root{
+    --background-color:#FFFFFF;
+    --color-primary:#516EFF;
+    --color-secondary:#FFD700;
+    --color-tertiary:#216583;
+    --text-primary:#18181B;
+    --text-secondary:#52525B;
+}
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+textarea{
+    resize: none;
+}
+
+.text-logo{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.normal-text{
+    color: var(--text-secondary);
+    font-size:1.1rem;
+    font-weight: normal;
+}
+
+.normal-text--secondary{
+    color: var(--background-color);
+    font-size:1.1rem;
+    font-weight: normal;
+}
+
+.title-text{
+    font-size: 3.5rem;
+    font-weight: bold;
+    .title-text--secondary{
+        color: var(--color-secondary);
+    }
+}
+
+.title-section-text{
+    font-size: 3rem;
+    .title-section-text--secondary{
+        font-size: 3rem;
+        color: var(--color-secondary);
+    }
+}
+
+.title-section-text--secondary{
+    color: var(--background-color);
+    font-size: 2.5rem;
+}
+
+.button-primary{
+    background-color: var(--color-primary);
+    color: var(--background-color);
+    border: none;
+    padding: 1rem 3rem;
+    &:hover{
+        color: var(--background-color);
+        background-color: var(--color-secondary);
+    }
+}
+
+.button-secondary{
+    background-color: var(--background-color);
+    color: var(--text-secondary);
+    border: 0.1rem solid var(--text-secondary);
+    padding: 1rem 3rem;
+    &:hover{
+        color: var(--background-color);
+        background-color: var(--text-secondary);
+        a{
+            color: var(--background-color);
+        }
+    }
+}
+
+.button-tertiary{
+    background-color: var(--background-color);
+    color: var(--color-primary);
+    border: 0.1rem solid var(--color-primary);
+    padding: 1rem 3rem;
+    &:hover{
+        color: var(--background-color);
+        background-color: var(--color-primary);
+    }
+}
+
+.button-fourth{
+    background-color: var(--background-color);
+    color: var(--text-secondary);
+    border: none;
+    padding: 1rem 3rem;
+    &:hover{
+        color: var(--background-color);
+        background-color: var(--color-primary);
+        a{
+            color: var(--background-color);
+        }
+    }
+}
+
+.button-fifth{
+    background-color: transparent;
+    color: var(--background-color);
+    border: 0.1rem solid var(--background-color);
+    padding: 1rem 3rem;
+    &:hover{
+        color: var(--text-primary);
+        background-color: var(--background-color);
+    }
+}
+
+.padding-section{
+    margin: 5rem 0 0 0;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        padding: 0 2rem;
+    }
+}
+
+
+
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
